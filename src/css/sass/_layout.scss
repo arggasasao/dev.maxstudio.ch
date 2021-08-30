@@ -1,0 +1,32 @@
+@use '../util' as *;
+
+main {
+	max-width: rem(1110);
+	margin: 0 auto rem(50);
+	
+	@include breakpoint-down(small) {
+		border: 1px solid blue;
+		padding: 0 rem(25);
+	}
+	@include breakpoint(medium) {
+		border: 1px dotted darkgreen;
+		padding: 0;
+	}
+	@include breakpoint(large) {
+		border: 1px dashed red;
+		padding: 0;
+	}
+}
+
+.flex{
+	display: flex;
+	&-fc-c{
+		align-items: center;
+	}
+	&-jc-sb{
+		justify-content: space-between;
+	}
+	&-fg-gr{
+		flex-grow: 1
+	}
+}

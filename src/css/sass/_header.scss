@@ -1,0 +1,25 @@
+header{
+    width: 100%;
+    height: 100px;
+    // overflow: hidden;
+    background-color: rgba($brand, 0.5);
+}
+header .header{
+    &__menu{
+        color: black;
+    }
+    &__menu-content{
+        color: black;
+    }
+}
+
+nav{
+    height: 100%;
+    & .logo{
+        height: 100%;
+    }
+    & .logo img{
+        height: 50%;
+    }
+
+}
