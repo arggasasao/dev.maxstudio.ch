@@ -1,0 +1,23 @@
+footer {
+    width: 100vw;
+    background-color: $brand;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(10);
+    color: $white;
+    font-size: rem(14);
+    a:hover {
+        color: $white;
+        opacity: 0.5;
+    }
+    .footer__center ul {
+        list-style: none;
+        display: flex;
+        li {
+            padding: 0 rem(10);
+            display: flex;
+            align-items: center;
+        }
+    }
+}
