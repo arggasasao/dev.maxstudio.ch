@@ -1,8 +1,8 @@
 <script>
-	// import Slider from "./components/Slider.svelte";
-	// import Services from "./Services.svelte";
+	import Slider from "./components/Slider.svelte";
+	import Services from "./components/Services.svelte";
 	import Header from "./components/Header.svelte";
-	// import Footer from "./components/Footer.svelte";
+	import Footer from "./components/Footer.svelte";
 	// import 'css/styles.css';
 </script>
 
@@ -12,9 +12,11 @@
 
 <main class="landing-main">
 	<Header/>
-	<!-- <Slider/> -->
-	<!-- <Services/> -->
-	<!-- <Footer/> -->
+	<Slider/>
+	<Services/>
+	<Footer/>
+	<div class="bg-lines"></div>
+	<div class="bg-bigx"></div>
 </main>
 
 <style>

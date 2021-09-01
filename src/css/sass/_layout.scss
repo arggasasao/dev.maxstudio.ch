@@ -1,32 +1,70 @@
 @use '../util' as *;
 
+body {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
 main {
-	max-width: rem(1110);
-	margin: 0 auto rem(50);
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	max-width: rem(1020);
+	width: 100%;
+	position: relative;
+	// height: 100vh;
+
 	@include breakpoint-down(small) {
-		border: 1px solid blue;
-		padding: 0 rem(25);
+		// border: 1px dashed blue;
+		// padding: 0 rem(25);
 	}
 	@include breakpoint(medium) {
-		border: 1px dotted darkgreen;
-		padding: 0;
+		// border: 1px dashed green;
+		// padding: 0;
 	}
 	@include breakpoint(large) {
-		border: 1px dashed red;
-		padding: 0;
+		// border: 1px dashed red;
+		// padding: 0;
+	}
+	.bg-lines {
+		position: absolute;
+		width: 1027px;
+		height: 100%;
+		background-image: url("../img/bg-lines-x.svg");
+		background-position: top center;
+		background-repeat: repeat-y;
+		background-size: 100%;
+		z-index: -1;
+	}
+	.bg-bigx {
+		position: absolute;
+		display: block;
+		width: 100vw;
+		height: 100%;
+		// border: 1px solid red;
+		background-image: url(../img/bg-bigx.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 0vw 100vh;
+		z-index: -2;
+		max-width: 1480px;
 	}
 }
 
-.flex{
+.flex {
 	display: flex;
-	&-fc-c{
+	&-fc-c {
 		align-items: center;
 	}
-	&-jc-sb{
+	&-jc-sb {
 		justify-content: space-between;
 	}
-	&-fg-gr{
-		flex-grow: 1
+	&-fg-gr {
+		flex-grow: 1;
+	}
+	&-al-vc {
+		align-items: center;
 	}
 }

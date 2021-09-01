@@ -1,7 +1,3 @@
-h1 {
-  color: #c00707;
-}
-
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -17,6 +13,11 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #c00707;
 }
 
 body {
@@ -25,31 +26,44 @@ body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   background: #fafafa;
   color: #00001a;
-  min-height: 150vh;
-  min-width: 1200px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 main {
-  max-width: 69.375rem;
-  margin: 0 auto 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 63.75rem;
+  width: 100%;
+  position: relative;
 }
-@media (max-width: 39.9375em) {
-  main {
-    border: 1px solid blue;
-    padding: 0 1.5625rem;
-  }
+main .bg-lines {
+  position: absolute;
+  width: 1027px;
+  height: 100%;
+  background-image: url("../img/bg-lines-x.svg");
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: 100%;
+  z-index: -1;
 }
-@media (min-width: 40em) {
-  main {
-    border: 1px dotted darkgreen;
-    padding: 0;
-  }
-}
-@media (min-width: 71.875em) {
-  main {
-    border: 1px dashed red;
-    padding: 0;
-  }
+main .bg-bigx {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100%;
+  background-image: url(../img/bg-bigx.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0vw 100vh;
+  z-index: -2;
+  max-width: 1480px;
 }
 
 .flex {
@@ -64,18 +78,64 @@ main {
 .flex-fg-gr {
   flex-grow: 1;
 }
+.flex-al-vc {
+  align-items: center;
+}
 
 header {
   width: 100%;
-  height: 100px;
-  background-color: rgba(192, 7, 7, 0.5);
+  height: 80px;
+  background-color: rgba(250, 250, 250, 0.5);
 }
 
-header .header__menu {
-  color: black;
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #c00707;
 }
-header .header__menu-content {
-  color: black;
+.header__menu > span:not(:last-child) {
+  margin-bottom: 4px;
+}
+.header__lang {
+  color: inherit;
+  margin-right: 20px;
+}
+.header__menu-content {
+  color: #fafafa;
+  background-color: #00001a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+.header__menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0;
+}
+.header__menu-items li {
+  list-style-type: none;
+  font-size: 5rem;
+}
+.header__menu-social {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 0 30%;
+}
+.header__menu-social li {
+  list-style: none;
+  list-style-position: inside;
+  display: flex;
+  align-items: center;
+}
+.header__menu-social svg {
+  margin-right: 10px;
 }
 
 nav {
@@ -86,4 +146,108 @@ nav .logo {
 }
 nav .logo img {
   height: 50%;
+}
+
+footer {
+  width: 100vw;
+  background-color: #c00707;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem;
+  color: #fafafa;
+  font-size: 0.875rem;
+}
+footer a:hover {
+  color: #fafafa;
+  opacity: 0.5;
+}
+footer .footer__center ul {
+  list-style: none;
+  display: flex;
+}
+footer .footer__center ul li {
+  padding: 0 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  min-height: 70vh;
+  margin-bottom: 6.25rem;
+}
+.slider__textbox {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+.slider__textbox h1 {
+  font-size: 4.6875rem;
+  margin: 0;
+}
+.slider__textbox h2 {
+  font-size: 4.6875rem;
+  font-weight: 400;
+  margin: 0;
+}
+.slider__textbox p {
+  max-width: 50%;
+}
+.slider__textbox button {
+  border: none;
+  background-color: #c00707;
+  padding: 0.625rem 1.5625rem;
+  color: #fafafa;
+  text-transform: uppercase;
+}
+.slider__image {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7.5rem;
+  padding: 0 1.25rem;
+}
+.service h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+.service h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0;
+}
+.service p {
+  width: 85%;
+}
+.service__textbox {
+  order: 2;
+  margin-left: 1.875rem;
+}
+.service__seemore {
+  display: flex;
+  align-items: center;
+}
+.service__seemore span {
+  text-transform: uppercase;
+  color: #c00707;
+  margin-right: 15px;
+}
+.service__right .service__textbox {
+  order: 0;
+  margin-left: 0;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+.service {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(120);
+    padding: 0 rem(20);
+    h1 {
+        font-size: rem(64);
+        margin: 0;
+    }
+    h2 {
+        font-size: rem(64);
+        font-weight: 400;
+        margin: 0;
+    }
+    p {
+        width: 85%;
+    }
+
+    &__textbox {
+        order: 2;
+        margin-left: rem(30);
+    }
+
+    &__seemore {
+        display: flex;
+        align-items: center;
+        span {
+            text-transform: uppercase;
+            color: $brand;
+            margin-right: 15px;
+        }
+    }
+
+    &__right {
+        .service__textbox {
+            order: 0;
+            margin-left: 0;
+        }
+    }
+}

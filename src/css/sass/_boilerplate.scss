@@ -13,6 +13,10 @@ a,
 a:visited,
 a:active {
 	text-decoration: none;
+	color: inherit;
+}
+a:hover{
+	color: $brand;
 }
 
 body {
@@ -21,6 +25,6 @@ body {
 	font-family: $font-base;
 	background: $white;
 	color: $black;
-	min-height: 150vh;
-	min-width: 1200px;
+	// min-height: 150vh;
+	// min-width: 1200px;
 }

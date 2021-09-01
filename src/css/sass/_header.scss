@@ -1,15 +1,73 @@
 header{
     width: 100%;
-    height: 100px;
+    height: 80px;
     // overflow: hidden;
-    background-color: rgba($brand, 0.5);
+    // background-color: rgba($brand, 0.5);
+    background-color: rgba($white, 0.5);
 }
-header .header{
+.header{
     &__menu{
-        color: black;
+        // color: black;
+        // display: block;
+        // position: absolute;
+        // width: 50px;
+        // height: 50px;
+        // background-color: red;
+        // z-index: 1;
+        // display: none;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // margin-left: 20px;
+        > span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: $brand;
+            &:not(:last-child){
+                margin-bottom: 4px;
+            }
+        }
+    }
+    &__lang{
+        color: inherit;
+        margin-right: 20px;
     }
     &__menu-content{
-        color: black;
+        color: $white;
+        background-color: $black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+    &__menu-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10% 0;
+        li{
+            list-style-type: none;
+            font-size: 5rem;
+        }
+    }
+    &__menu-social{
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        padding: 0 30%;
+        li{
+            list-style: none;
+            list-style-position: inside;
+            display: flex;
+            align-items: center;
+        }
+        svg{
+            margin-right: 10px;
+        }
     }
 }
 

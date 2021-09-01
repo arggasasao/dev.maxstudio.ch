@@ -60,7 +60,7 @@ export default {
 		}),
 		commonjs(),
 		copy({
-			watch: 'src/css/*.css',
+			watch: ['src/css/*.css','src/index.html','src/img/*'],
 			targets: [
 			  { src: 'src/index.html', dest: 'public' },
 			  { src: ['src/css/*.css', 'src/css/*.map'], dest: 'public/css' },
