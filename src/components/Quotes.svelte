@@ -1,10 +1,18 @@
 <script>
     import Icon from "svelte-awesome";
     import { chevronRight  } from "svelte-awesome/icons";
-    // import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
-    let box = document.getElementById('quotes')
-    // let ww = box.offsetWidth
-    console.log(box)
+    import { onMount } from 'svelte';
+    onMount(async () => {
+        updateQuotes()
+	});
+    const updateQuotes = ()=>{
+        let box = document.querySelector('.quotes__container').offsetWidth
+        console.log(box)
+        document.querySelector('.quotes__item').style['min-width'] = box+"px"
+    }
+    window.onresize = ()=>{
+        updateQuotes()
+    }
 </script>
 
 <section class="quotes">

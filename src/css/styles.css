@@ -307,7 +307,7 @@ footer .footer__center ul li {
   position: relative;
 }
 .quotes__item {
-  min-width: 63.75rem;
+  width: 100%;
   padding: 0 13.75rem;
 }
 .quotes__text p {

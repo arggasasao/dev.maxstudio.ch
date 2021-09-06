@@ -147,6 +147,14 @@ var app = (function () {
     function set_current_component(component) {
         current_component = component;
     }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error('Function called outside component initialization');
+        return current_component;
+    }
+    function onMount(fn) {
+        get_current_component().$$.on_mount.push(fn);
+    }
 
     const dirty_components = [];
     const binding_callbacks = [];
@@ -3741,13 +3749,13 @@ var app = (function () {
     			t23 = space();
     			p4 = element("p");
     			p4.textContent = "Our team are from different part of the world";
-    			add_location(h1, file$1, 10, 4, 320);
-    			add_location(b0, file$1, 12, 40, 401);
-    			add_location(p0, file$1, 11, 4, 357);
+    			add_location(h1, file$1, 18, 4, 510);
+    			add_location(b0, file$1, 20, 40, 591);
+    			add_location(p0, file$1, 19, 4, 547);
     			attr_dev(path0, "id", "arrow");
     			attr_dev(path0, "d", "M30.243,60.918L41.237,49.924L22.23,30.918L41.237,11.913L30.243,0.918L0.243,30.918L30.243,60.918Z");
     			set_style(path0, "fill-rule", "nonzero");
-    			add_location(path0, file$1, 17, 16, 799);
+    			add_location(path0, file$1, 25, 16, 989);
     			attr_dev(svg0, "width", "42px");
     			attr_dev(svg0, "height", "61px");
     			attr_dev(svg0, "version", "1.1");
@@ -3759,14 +3767,14 @@ var app = (function () {
     			set_style(svg0, "clip-rule", "evenodd");
     			set_style(svg0, "stroke-linejoin", "round");
     			set_style(svg0, "stroke-miterlimit", "2");
-    			add_location(svg0, file$1, 16, 12, 514);
+    			add_location(svg0, file$1, 24, 12, 704);
     			attr_dev(a0, "class", "quotes__right");
     			attr_dev(a0, "href", "/#");
-    			add_location(a0, file$1, 15, 8, 466);
+    			add_location(a0, file$1, 23, 8, 656);
     			attr_dev(path1, "id", "arrow");
     			attr_dev(path1, "d", "M30.243,60.918L41.237,49.924L22.23,30.918L41.237,11.913L30.243,0.918L0.243,30.918L30.243,60.918Z");
     			set_style(path1, "fill-rule", "nonzero");
-    			add_location(path1, file$1, 22, 16, 1319);
+    			add_location(path1, file$1, 30, 16, 1509);
     			attr_dev(svg1, "width", "42px");
     			attr_dev(svg1, "height", "61px");
     			attr_dev(svg1, "version", "1.1");
@@ -3778,49 +3786,49 @@ var app = (function () {
     			set_style(svg1, "clip-rule", "evenodd");
     			set_style(svg1, "stroke-linejoin", "round");
     			set_style(svg1, "stroke-miterlimit", "2");
-    			add_location(svg1, file$1, 21, 12, 1034);
+    			add_location(svg1, file$1, 29, 12, 1224);
     			attr_dev(a1, "class", "quotes__left");
     			attr_dev(a1, "href", "/#");
-    			add_location(a1, file$1, 20, 8, 987);
+    			add_location(a1, file$1, 28, 8, 1177);
     			attr_dev(div0, "class", "quotes__nav");
-    			add_location(div0, file$1, 14, 4, 432);
-    			add_location(b1, file$1, 32, 67, 1831);
-    			add_location(p1, file$1, 31, 20, 1760);
+    			add_location(div0, file$1, 22, 4, 622);
+    			add_location(b1, file$1, 40, 67, 2021);
+    			add_location(p1, file$1, 39, 20, 1950);
     			attr_dev(div1, "class", "quotes__text");
-    			add_location(div1, file$1, 29, 16, 1650);
+    			add_location(div1, file$1, 37, 16, 1840);
     			if (!src_url_equal(img0.src, img0_src_value = "./img/avatar_woman.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "");
-    			add_location(img0, file$1, 37, 20, 2024);
-    			add_location(h20, file$1, 39, 24, 2139);
-    			add_location(p2, file$1, 40, 24, 2197);
+    			add_location(img0, file$1, 45, 20, 2214);
+    			add_location(h20, file$1, 47, 24, 2329);
+    			add_location(p2, file$1, 48, 24, 2387);
     			attr_dev(div2, "class", "quotes__name");
-    			add_location(div2, file$1, 38, 20, 2088);
+    			add_location(div2, file$1, 46, 20, 2278);
     			attr_dev(div3, "class", "quotes__avatar");
-    			add_location(div3, file$1, 36, 16, 1975);
+    			add_location(div3, file$1, 44, 16, 2165);
     			attr_dev(div4, "class", "quotes__item");
-    			add_location(div4, file$1, 28, 12, 1607);
-    			add_location(b2, file$1, 49, 67, 2556);
-    			add_location(p3, file$1, 48, 20, 2485);
+    			add_location(div4, file$1, 36, 12, 1797);
+    			add_location(b2, file$1, 57, 67, 2746);
+    			add_location(p3, file$1, 56, 20, 2675);
     			attr_dev(div5, "class", "quotes__text");
-    			add_location(div5, file$1, 46, 16, 2375);
+    			add_location(div5, file$1, 54, 16, 2565);
     			if (!src_url_equal(img1.src, img1_src_value = "./img/avatar_woman.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$1, 54, 20, 2749);
-    			add_location(h21, file$1, 56, 24, 2864);
-    			add_location(p4, file$1, 57, 24, 2922);
+    			add_location(img1, file$1, 62, 20, 2939);
+    			add_location(h21, file$1, 64, 24, 3054);
+    			add_location(p4, file$1, 65, 24, 3112);
     			attr_dev(div6, "class", "quotes__name");
-    			add_location(div6, file$1, 55, 20, 2813);
+    			add_location(div6, file$1, 63, 20, 3003);
     			attr_dev(div7, "class", "quotes__avatar");
-    			add_location(div7, file$1, 53, 16, 2700);
+    			add_location(div7, file$1, 61, 16, 2890);
     			attr_dev(div8, "class", "quotes__item");
-    			add_location(div8, file$1, 45, 12, 2332);
+    			add_location(div8, file$1, 53, 12, 2522);
     			attr_dev(div9, "class", "quotes__scroll");
-    			add_location(div9, file$1, 27, 8, 1566);
+    			add_location(div9, file$1, 35, 8, 1756);
     			attr_dev(div10, "id", "quotes");
     			attr_dev(div10, "class", "quotes__container");
-    			add_location(div10, file$1, 26, 4, 1514);
+    			add_location(div10, file$1, 34, 4, 1704);
     			attr_dev(section, "class", "quotes");
-    			add_location(section, file$1, 9, 0, 291);
+    			add_location(section, file$1, 17, 0, 481);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3897,10 +3905,20 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Quotes', slots, []);
-    	let box = document.getElementById('quotes');
 
-    	// let ww = box.offsetWidth
-    	console.log(box);
+    	onMount(async () => {
+    		updateQuotes();
+    	});
+
+    	const updateQuotes = () => {
+    		let box = document.querySelector('.quotes__container').offsetWidth;
+    		console.log(box);
+    		document.querySelector('.quotes__item').style['min-width'] = box + "px";
+    	};
+
+    	window.onresize = () => {
+    		updateQuotes();
+    	};
 
     	const writable_props = [];
 
@@ -3908,15 +3926,12 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Quotes> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Icon, chevronRight, box });
-
-    	$$self.$inject_state = $$props => {
-    		if ('box' in $$props) box = $$props.box;
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
+    	$$self.$capture_state = () => ({
+    		Icon,
+    		chevronRight,
+    		onMount,
+    		updateQuotes
+    	});
 
     	return [];
     }

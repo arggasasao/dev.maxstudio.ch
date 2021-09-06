@@ -16,7 +16,8 @@
         position: relative;
     }
     &__item{
-        min-width: rem(1020);
+        // min-width: rem(1020);
+        width: 100%;
         padding: 0 rem(220);
     }
     &__text p{
