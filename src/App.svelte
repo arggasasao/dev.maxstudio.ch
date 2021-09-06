@@ -3,6 +3,8 @@
 	import Services from "./components/Services.svelte";
 	import Header from "./components/Header.svelte";
 	import Footer from "./components/Footer.svelte";
+	import Hireus from "./components/Hireus.svelte";
+	import Quotes from "./components/Quotes.svelte";
 	// import 'css/styles.css';
 </script>
 
@@ -14,6 +16,8 @@
 	<Header/>
 	<Slider/>
 	<Services/>
+	<Hireus/>
+	<Quotes/>
 	<Footer/>
 	<div class="bg-lines"></div>
 	<div class="bg-bigx"></div>

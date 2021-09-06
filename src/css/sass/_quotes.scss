@@ -1,0 +1,66 @@
+.quotes {
+    // border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &__container{
+        width: 100%;
+        overflow: hidden;
+        margin: rem(50) 0;
+        // border: 1px dotted rebeccapurple;
+    }
+    &__scroll{
+        display: flex;
+        position: relative;
+    }
+    &__item{
+        min-width: rem(1020);
+        padding: 0 rem(220);
+    }
+    &__text p{
+        margin-top: 0;
+    }
+    &__text::before{
+        content: url(../img/quotes.svg);
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin-left: -70px;
+    }
+    h1 {
+        font-size: rem(64);
+        // margin: 0;
+    }
+    h2 {
+        font-size: rem(32);
+        margin: 0;
+    }
+    &__nav{
+        z-index: 1;
+    }
+    &__left,
+    &__right {
+        position: absolute;
+        top: 50%;
+        svg:hover {
+            fill: red;
+        }
+    }
+    &__left {
+        left: 0;
+    }
+    &__right {
+        right: 0;
+        transform: scaleX(-1);
+    }
+    &__text {
+        position: relative;
+        // margin-top: 60px;
+        font-size: rem(30);
+        // img {
+        //     margin-left: rem(-60);
+        
+    }
+}

@@ -185,6 +185,7 @@ footer .footer__center ul li {
   display: flex;
   align-items: center;
   order: 1;
+  padding-left: 1.25rem;
 }
 .slider__textbox h1 {
   font-size: 4.6875rem;
@@ -219,6 +220,7 @@ footer .footer__center ul li {
 .service {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 7.5rem;
   padding: 0 1.25rem;
 }
@@ -236,7 +238,12 @@ footer .footer__center ul li {
 }
 .service__textbox {
   order: 2;
-  margin-left: 1.875rem;
+}
+.service__image img {
+  width: 100%;
+}
+.service__image, .service__textbox {
+  width: 49%;
 }
 .service__seemore {
   display: flex;
@@ -250,4 +257,120 @@ footer .footer__center ul li {
 .service__right .service__textbox {
   order: 0;
   margin-left: 0;
+}
+
+.hireus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+.hireus h1 {
+  font-size: 4rem;
+}
+.hireus h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.hireus span {
+  display: none;
+}
+.hireus__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 3.125rem 0;
+}
+.hireus__number {
+  margin-right: 1.25rem;
+}
+.hireus__number img {
+  width: 60px;
+}
+
+.quotes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.quotes__container {
+  width: 100%;
+  overflow: hidden;
+  margin: 3.125rem 0;
+}
+.quotes__scroll {
+  display: flex;
+  position: relative;
+}
+.quotes__item {
+  min-width: 63.75rem;
+  padding: 0 13.75rem;
+}
+.quotes__text p {
+  margin-top: 0;
+}
+.quotes__text::before {
+  content: url(../img/quotes.svg);
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: -70px;
+}
+.quotes h1 {
+  font-size: 4rem;
+}
+.quotes h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.quotes__nav {
+  z-index: 1;
+}
+.quotes__left, .quotes__right {
+  position: absolute;
+  top: 50%;
+}
+.quotes__left svg:hover, .quotes__right svg:hover {
+  fill: red;
+}
+.quotes__left {
+  left: 0;
+}
+.quotes__right {
+  right: 0;
+  transform: scaleX(-1);
+}
+.quotes__text {
+  position: relative;
+  font-size: 1.875rem;
+}
+
+b {
+  color: #c00707;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 3.4375rem;
+  margin-bottom: 0.1875rem;
+}
+@media (min-width: 71.875em) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */

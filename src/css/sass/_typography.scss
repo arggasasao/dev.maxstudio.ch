@@ -1,5 +1,9 @@
 @use '../util' as *;
 
+b{
+	color: $brand;
+}
+
 h1,
 h2,
 h3 {
@@ -18,4 +22,5 @@ h1 {
 h2 {
 	font-size: rem(24);
 	margin-bottom: rem(24);
+
 }

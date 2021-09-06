@@ -1,6 +1,7 @@
 <script>
   import Icon from 'svelte-awesome';
-  import { beer, facebook,instagram ,linkedin} from 'svelte-awesome/icons';
+  import { facebook,instagram ,linkedin} from 'svelte-awesome/icons';
+//   import { faLinkedin } from '@fontawesome/free-regular-svg-icons';
 
 </script>
 
@@ -14,11 +15,14 @@
                 <a href="http://instagram/maxstudio"><Icon data={instagram}/></a>
             </li>
             <li class="footer__link-facebook">
-                <a href="http://instagram/maxstudio"><Icon data={facebook}/></a>
+                <a href="http://facebook.com/maxstudio"><Icon data={facebook}/></a>
             </li>
             <li class="footer__link-linkedin">
-                <a href="http://instagram/maxstudio"><Icon data={linkedin}/></a>
+                <a href="http://linkedin.com/maxstudio"><Icon data={linkedin}/></a>
             </li>
+            <!-- <li class="footer__link-linkedin">
+                <a href="http://instagram.com/maxstudio"><i class="fab fa-linkedin"></i></a>
+            </li> -->
         </ul>
 
     </div>

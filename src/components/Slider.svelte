@@ -8,7 +8,7 @@
     </div>
     <div class="slider__textbox">
         <div class="slider__title">
-            <h1>Working summer</h1>
+            <h1>Working summerX</h1>
             <h2>Taste the eficiency</h2>
             <p>Aqui pode ver algumas de nossas especialidades.
                 Si não encontrou o que procura, consultar-nos sem compromiso nenhum.</p>
